@@ -30,6 +30,6 @@ jobs:
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: my-web-idriss
+          app-name: cloud-docker-app1
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           images: ${{ secrets.DOCKERHUB_USERNAME }}/node-azure-docker:latest
