@@ -24,5 +24,5 @@ app.get('/', (req, res) => {
   res.send(`<h1>Visites : ${visits}</h1>`);
 });
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Running on port ${port}`));
