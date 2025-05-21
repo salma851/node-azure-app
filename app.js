@@ -1,10 +1,11 @@
-const http = require('http');
+const express = require('express');
+const app = express();
+const port = 3000;
 
-const server = http.createServer((req, res) => {
-  res.end(' Déploiement CI/CD réussi avec Azure et Docker Hub !');
+app.get('/', (req, res) => {
+  res.send('Hello from Node.js app deployed with Docker and Azure!');
 });
 
-const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-  console.log(`Serveur démarré sur le port ${PORT}`);
+app.listen(port, () => {
+  console.log(`App listening on port ${port}`);
 });
